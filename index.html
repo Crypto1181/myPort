@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fatai Oladayo Owotutu — Full-Stack App Developer | Flutter, Node.js &amp; Supabase</title>
+  <meta name="description" content="Portfolio of Fatai Oladayo Owotutu — Full-Stack Developer specializing in Flutter, Node.js &amp; Supabase. Fast, scalable cross-platform mobile and web applications." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <button class="menu-toggle" id="menu-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="sidebar">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="sidebar-overlay" id="sidebar-overlay" hidden></div>
+
+  <!-- ── SIDEBAR ──────────────────────────────────────── -->
+  <aside class="sidebar" id="sidebar" aria-label="Primary navigation">
+    <a href="#overview" class="brand" data-view="overview" aria-label="Fatai Portfolio Overview">
+      <span class="brand-avatar-wrap">
+        <img src="Mypic.jpeg" alt="Fatai Oladayo Owotutu" class="brand-avatar" />
+      </span>
+      <span class="brand-name">Fatai</span>
+    </a>
+
+    <nav class="side-nav" aria-label="Sections">
+      <a href="#overview" class="side-link is-active" data-view="overview">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M3 4a1 1 0 011-1h5a1 1 0 011 1v5a1 1 0 01-1 1H4a1 1 0 01-1-1V4zm11-1a1 1 0 00-1 1v5a1 1 0 001 1h5a1 1 0 001-1V4a1 1 0 00-1-1h-5zM3 15a1 1 0 011-1h5a1 1 0 011 1v5a1 1 0 01-1 1H4a1 1 0 01-1-1v-5zm11-1a1 1 0 00-1 1v5a1 1 0 001 1h5a1 1 0 001-1v-5a1 1 0 00-1-1h-5z"/>
+        </svg>
+        <span>Overview</span>
+      </a>
+      <a href="#work" class="side-link" data-view="work">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M3 6a2 2 0 012-2h4.586a1 1 0 01.707.293L12.414 6H19a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2V6z"/>
+        </svg>
+        <span>Work</span>
+      </a>
+      <a href="#services" class="side-link" data-view="services">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <polygon points="12 2 2 7 12 12 22 7 12 2"/>
+          <polyline points="2 17 12 22 22 17"/>
+          <polyline points="2 12 12 17 22 12"/>
+        </svg>
+        <span>Services</span>
+      </a>
+      <a href="#about" class="side-link" data-view="about">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M12 12a5 5 0 100-10 5 5 0 000 10zm-7 8a7 7 0 0114 0H5z"/>
+        </svg>
+        <span>About</span>
+      </a>
+      <a href="#contact" class="side-link" data-view="contact">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M3 5a2 2 0 012-2h14a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5zm2 1v.38l7 4.375 7-4.375V6H5zm14 3.245l-6.47 4.043a1 1 0 01-1.06 0L5 9.245V18h14V9.245z"/>
+        </svg>
+        <span>Contact</span>
+      </a>
+    </nav>
+
+    <div class="availability">
+      <span class="avail-dot" aria-hidden="true"></span>
+      <div>
+        <p class="avail-title">Available for hire</p>
+        <p class="avail-sub">
+          <a href="https://www.upwork.com/freelancers/~018522115edfae3d7c" target="_blank" rel="noopener" style="color: var(--ok); text-decoration: underline;">Available on Upwork ↗</a>
+        </p>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ── MAIN CONTENT ─────────────────────────────────── -->
+  <div class="shell">
+    <main class="main" id="main">
+      <!-- 01 OVERVIEW -->
+      <section class="view is-active" id="overview" data-title="Overview">
+        <header class="hero">
+          <p class="eyebrow">FULL-STACK APP DEVELOPER</p>
+          <h1>Building fast, scalable<br /><span>Flutter &amp; Web applications.</span></h1>
+          <p class="lede">Specializing in Flutter and Node.js — handling everything from responsive UI design to secure backend database architecture in Supabase &amp; MongoDB.</p>
+          <div class="hero-actions">
+            <a href="https://www.upwork.com/freelancers/~018522115edfae3d7c" target="_blank" rel="noopener" class="btn btn-upwork">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.561 13.158c-1.102 0-2.135-.467-3.074-1.227l.228-1.076.008-.042c.207-1.143.849-3.06 2.839-3.06 1.492 0 2.703 1.212 2.703 2.703-.001 1.489-1.212 2.702-2.704 2.702zm0-8.14c-3.267 0-5.55 2.147-6.398 5.434l-.454 1.834c-.958-1.859-1.636-4.225-1.956-6.848H6.262v8.232c0 2.083-1.694 3.777-3.777 3.777S-.708 17.447-.708 15.364V7.133H-4.216v8.231c0 4.018 3.268 7.286 7.285 7.286 4.018 0 7.286-3.268 7.286-7.286v-1.666c.35 1.776.996 3.42 1.916 4.808l-2.034 9.61h3.633l1.378-6.516c1.468.96 3.197 1.543 5.097 1.543 4.418 0 8.001-3.583 8.001-8.001 0-4.417-3.583-8.001-8.001-8.001z"/></svg>
+              <span>Hire on Upwork ↗</span>
+            </a>
+            <a href="#contact" class="btn btn-primary" data-view="contact">Start a Project</a>
+            <a href="cv.html" class="btn btn-ghost" target="_blank" rel="noopener">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+              <span>Download CV</span>
+            </a>
+          </div>
+        </header>
+
+        <div class="section-head">
+          <h2>Featured Work</h2>
+          <a href="#work" class="text-link" data-view="work">→ See All Projects</a>
+        </div>
+
+        <div class="project-grid" id="featured-grid"></div>
+
+        <section class="stats" aria-label="Highlights">
+          <div class="stat-item">
+            <p class="stat-num">05+</p>
+            <p class="stat-label">Years Experience</p>
+            <p class="stat-copy">Building high-performing mobile and web applications.</p>
+          </div>
+          <div class="stat-item">
+            <p class="stat-num">100%</p>
+            <p class="stat-label">Job Success &amp; Quality</p>
+            <p class="stat-copy">Committed to delivering quality projects on time with high client satisfaction.</p>
+          </div>
+          <div class="stat-item">
+            <p class="stat-num">Google</p>
+            <p class="stat-label">Certified Specialist</p>
+            <p class="stat-copy">Google Certified Flutter &amp; Dart Specialist (Issued by Google LLC).</p>
+          </div>
+        </section>
+      </section>
+
+      <!-- 02 WORK -->
+      <section class="view" id="work" data-title="Work" hidden>
+        <header class="page-hero">
+          <p class="eyebrow">PORTFOLIO CATALOG</p>
+          <h1>Work that ships.</h1>
+          <p class="lede">Selected production applications across Flutter mobile development, fintech &amp; trading, e-commerce, AI assistants, productivity, and secure networking.</p>
+        </header>
+        <div class="filters" role="tablist" aria-label="Filter projects">
+          <button class="filter-btn is-active" data-filter="all">All Projects</button>
+          <button class="filter-btn" data-filter="fintech">Fintech &amp; Trading</button>
+          <button class="filter-btn" data-filter="social">Social &amp; Realtime</button>
+          <button class="filter-btn" data-filter="ecommerce">E-commerce</button>
+          <button class="filter-btn" data-filter="ai">AI Chatbot</button>
+          <button class="filter-btn" data-filter="productivity">Productivity</button>
+          <button class="filter-btn" data-filter="security">Security &amp; VPN</button>
+        </div>
+        <div class="project-grid" id="work-grid"></div>
+      </section>
+
+      <!-- 03 SERVICES -->
+      <section class="view" id="services" data-title="Services" hidden>
+        <header class="page-hero">
+          <p class="eyebrow">CAPABILITIES &amp; SKILLS</p>
+          <h1>What I bring to your team.</h1>
+          <p class="lede">End-to-end full-stack development — from responsive UI design to secure backend database architecture.</p>
+        </header>
+
+        <!-- Google Certified Badge -->
+        <div class="cert-banner">
+          <div class="cert-icon-wrap">
+            <svg viewBox="0 0 24 24" width="36" height="36" fill="none"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="#F59E0B"/><circle cx="12" cy="11" r="3" fill="#14151a"/></svg>
+          </div>
+          <div class="cert-text">
+            <span class="cert-badge">VERIFIED CREDENTIAL</span>
+            <h3>Google Certified Flutter &amp; Dart Specialist</h3>
+            <p>Provider: <strong>Google LLC</strong> · Issued: October 2021</p>
+          </div>
+        </div>
+
+        <!-- Interactive Skills Breakdown -->
+        <div class="skills-showcase">
+          <div class="skill-group">
+            <h4><span class="group-icon">📱</span> Mobile App Engineering</h4>
+            <div class="skill-chips">
+              <span class="chip chip-hot">Flutter</span>
+              <span class="chip chip-hot">Dart</span>
+              <span class="chip">iOS Development</span>
+              <span class="chip">Android App Development</span>
+              <span class="chip">Native App Development</span>
+              <span class="chip">Kotlin</span>
+              <span class="chip">Mobile App Bug Fix</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <h4><span class="group-icon">⚙️</span> Backend, Databases &amp; Cloud</h4>
+            <div class="skill-chips">
+              <span class="chip chip-hot">Node.js</span>
+              <span class="chip chip-hot">ExpressJS</span>
+              <span class="chip chip-hot">Supabase</span>
+              <span class="chip">MongoDB</span>
+              <span class="chip">API Integration</span>
+              <span class="chip">RESTful APIs</span>
+              <span class="chip">WebSockets</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <h4><span class="group-icon">🛠️</span> Web, Systems &amp; Standards</h4>
+            <div class="skill-chips">
+              <span class="chip">JavaScript</span>
+              <span class="chip">Linux</span>
+              <span class="chip">Software Development</span>
+              <span class="chip">Clean Architecture</span>
+              <span class="chip">Git Version Control</span>
+              <span class="chip">Detail Oriented</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service Cards -->
+        <div class="service-grid">
+          <article class="service-card">
+            <div class="service-icon">📱</div>
+            <h3>Cross-Platform Mobile Apps</h3>
+            <p>High-performing iOS and Android applications built with Flutter &amp; Dart. Pixel-perfect translation from Figma, custom AppBars, gesture cards, and smooth 60fps animations.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-icon">🚀</div>
+            <h3>End-to-End MVP Prototyping</h3>
+            <p>Collaborating with early-stage founders to take mobile and web concepts from wireframe to deployment. Full-stack development with database setup and scalable backend APIs.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-icon">⚡</div>
+            <h3>Backend &amp; API Architecture</h3>
+            <p>Robust backend systems powered by Node.js, Express, Supabase, and MongoDB. Secure authentication, high-throughput RESTful endpoints, and real-time database sync.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-icon">🔧</div>
+            <h3>Mobile Bug Fixes &amp; Optimization</h3>
+            <p>Deep troubleshooting, memory leak elimination, and performance profiling. Optimizing dynamic stateful widgets and native Android/iOS integrations for legacy or active codebases.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- 04 ABOUT -->
+      <section class="view" id="about" data-title="About" hidden>
+        <header class="page-hero">
+          <p class="eyebrow">ABOUT ME</p>
+          <h1>Full-Stack Developer.</h1>
+        </header>
+        <div class="about-layout">
+          <div class="about-photo-col">
+            <div class="about-photo-card">
+              <img src="Mypic.jpeg" alt="Fatai Oladayo Owotutu" class="about-photo" />
+              <div class="about-photo-meta">
+                <span class="avail-dot" aria-hidden="true"></span>
+                <div>
+                  <strong>Fatai Oladayo Owotutu</strong>
+                  <p>Flutter, Node.js &amp; Supabase Specialist</p>
+                </div>
+              </div>
+            </div>
+            <!-- Upwork highlight -->
+            <div class="about-rate-card">
+              <div>
+                <span class="rate-label">Upwork Status</span>
+                <span class="rate-val">Available for Hire</span>
+              </div>
+              <a href="https://www.upwork.com/freelancers/~018522115edfae3d7c" target="_blank" rel="noopener" class="btn btn-upwork btn-sm">Hire on Upwork ↗</a>
+            </div>
+          </div>
+          <div class="about-copy">
+            <p class="about-lead">I build fast, scalable cross-platform mobile and web applications. As a Full-Stack Developer specializing in Flutter and Node.js, I handle everything from responsive UI design to secure backend database architecture.</p>
+            <p>Dedicated and results-driven full-stack developer with expertise in building high-performing mobile and web applications. Skilled in native Android and iOS app development, along with robust backend and frontend solutions.</p>
+            <p>Experienced in crafting scalable APIs, responsive user interfaces, and integrating modern tools to deliver seamless user experiences. Passionate about solving complex problems, optimizing performance, and creating clean, maintainable code. Committed to delivering quality projects on time while ensuring client satisfaction.</p>
+            
+            <div class="experience-block">
+              <div class="exp-item">
+                <strong>End-to-End MVP Prototyping for Startups</strong>
+                <p>Collaborated with early-stage founders to take mobile and web concepts from wireframe to deployment. Handled database architecture in Supabase/MongoDB, scalable backend APIs with Node.js/Express, and cross-platform Flutter client apps.</p>
+              </div>
+              <div class="exp-item">
+                <strong>Open Source Tooling &amp; Flutter UI Engineering</strong>
+                <p>Actively develop reusable open-source components and architecture boilerplates for the Flutter community. Focused on clean code standards, smooth UI micro-animations, efficient state management, and seamless RESTful API integration.</p>
+              </div>
+            </div>
+
+            <div class="info-stack">
+              <div class="info-card"><span>Location</span><strong>Osogbo, Nigeria · Remote-ready</strong></div>
+              <div class="info-card"><span>Status</span><strong class="ok">Available for hire</strong></div>
+              <div class="info-card"><span>Certification</span><strong>Google Certified Flutter Specialist</strong></div>
+              <div class="info-card"><span>Core Stack</span><strong>Flutter · Node.js · Supabase · MongoDB</strong></div>
+            </div>
+
+            <div style="margin-top: 24px; display: flex; gap: 12px; flex-wrap: wrap;">
+              <a href="https://www.upwork.com/freelancers/~018522115edfae3d7c" class="btn btn-upwork" target="_blank" rel="noopener">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.561 13.158c-1.102 0-2.135-.467-3.074-1.227l.228-1.076.008-.042c.207-1.143.849-3.06 2.839-3.06 1.492 0 2.703 1.212 2.703 2.703-.001 1.489-1.212 2.702-2.704 2.702zm0-8.14c-3.267 0-5.55 2.147-6.398 5.434l-.454 1.834c-.958-1.859-1.636-4.225-1.956-6.848H6.262v8.232c0 2.083-1.694 3.777-3.777 3.777S-.708 17.447-.708 15.364V7.133H-4.216v8.231c0 4.018 3.268 7.286 7.285 7.286 4.018 0 7.286-3.268 7.286-7.286v-1.666c.35 1.776.996 3.42 1.916 4.808l-2.034 9.61h3.633l1.378-6.516c1.468.96 3.197 1.543 5.097 1.543 4.418 0 8.001-3.583 8.001-8.001 0-4.417-3.583-8.001-8.001-8.001z"/></svg>
+                <span>Hire on Upwork ↗</span>
+              </a>
+              <a href="cv.html" class="btn btn-primary" target="_blank" rel="noopener">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                <span>View Full CV / Resume</span>
+              </a>
+              <a href="https://github.com/Crypto1181" class="btn btn-ghost" target="_blank" rel="noopener">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12"/></svg>
+                <span>GitHub Profile</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 05 CONTACT -->
+      <section class="view" id="contact" data-title="Contact" hidden>
+        <header class="page-hero">
+          <p class="eyebrow">GET IN TOUCH</p>
+          <h1>Let's build something great.</h1>
+          <p class="lede">Have a mobile app in mind, need a full-stack engineer, or want to hire me on Upwork? I respond within 24 hours.</p>
+        </header>
+        <div class="contact-layout">
+          <div class="contact-meta">
+            <div class="info-card">
+              <span>Upwork Direct Contract</span>
+              <strong><a href="https://www.upwork.com/freelancers/~018522115edfae3d7c" target="_blank" rel="noopener" style="color: #34d399;">Hire Me on Upwork ↗</a></strong>
+            </div>
+            <div class="info-card">
+              <span>Direct Email</span>
+              <strong><a href="mailto:owotutufatai104@gmail.com">owotutufatai104@gmail.com</a></strong>
+            </div>
+            <div class="info-card">
+              <span>Phone / WhatsApp</span>
+              <strong><a href="tel:+2347011030875">+234 701 103 0875</a></strong>
+            </div>
+            <div class="info-card">
+              <span>GitHub</span>
+              <strong><a href="https://github.com/Crypto1181" target="_blank" rel="noopener">github.com/Crypto1181</a></strong>
+            </div>
+          </div>
+          <form class="contact-form" id="contact-form" action="https://formsubmit.co/owotutufatai104@gmail.com" method="POST" novalidate>
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_template" value="table" />
+            <input type="hidden" name="_subject" id="form-email-subject" value="New Portfolio Inquiry - Fatai Oladayo Owotutu" />
+            <div class="form-row">
+              <label>Full Name
+                <input type="text" name="name" id="form-name" placeholder="John Doe" required autocomplete="name" />
+              </label>
+              <label>Email Address
+                <input type="email" name="email" id="form-email" placeholder="john@company.com" required autocomplete="email" />
+              </label>
+            </div>
+            <label>Subject
+              <input type="text" name="subject" id="form-subject" placeholder="Flutter App Project / Full-Stack Development" />
+            </label>
+            <label>Message
+              <textarea name="message" id="form-message" rows="6" placeholder="Tell me about your mobile or web app project, requirements, and timeline..." required></textarea>
+            </label>
+            <button type="submit" class="btn btn-primary" id="form-submit-btn">
+              <span class="btn-text">Send Message</span>
+              <span class="btn-loading" hidden>Sending…</span>
+            </button>
+            <p class="form-success" id="form-success" hidden>Thanks — your message has been sent directly to my email! I'll get back to you within 24 hours.</p>
+            <p class="form-error" id="form-error" hidden>Please fill in your name, a valid email, and a message.</p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- ── FOOTER ──────────────────────────────────────── -->
+    <footer class="footer">
+      <p>© <span id="year"></span> Fatai Oladayo Owotutu Portfolio</p>
+      <div class="footer-social">
+        <a href="https://www.upwork.com/freelancers/~018522115edfae3d7c" target="_blank" rel="noopener" style="color: #34d399; font-weight: 600;">Upwork ↗</a>
+        <a href="https://github.com/Crypto1181" target="_blank" rel="noopener">GitHub</a>
+        <a href="mailto:owotutufatai104@gmail.com">Email</a>
+        <a href="tel:+2347011030875">Phone</a>
+
+      </div>
+    </footer>
+  </div>
+
+  <!-- ── CASE STUDY MODAL ─────────────────────────────── -->
+  <div class="modal" id="case-modal" hidden>
+    <div class="modal-backdrop" data-close-modal></div>
+    <article class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <button class="modal-close" type="button" data-close-modal aria-label="Close case study">×</button>
+      <img id="modal-image" alt="" />
+      <div class="modal-content">
+        <div class="modal-header-meta">
+          <span class="card-cat" id="modal-category"></span>
+          <span class="modal-role-badge" id="modal-role"></span>
+        </div>
+        <h2 id="modal-title"></h2>
+        <p id="modal-body"></p>
+        <div class="modal-deliverables-box">
+          <strong>Key Deliverables:</strong>
+          <p id="modal-deliverables"></p>
+        </div>
+        <div class="pills" id="modal-tags"></div>
+        <div class="modal-cta-row">
+          <a href="https://www.upwork.com/freelancers/~018522115edfae3d7c" target="_blank" rel="noopener" class="btn btn-upwork">
+            <span>Hire on Upwork ↗</span>
+          </a>
+          <button type="button" class="btn btn-ghost" data-close-modal>Close</button>
+        </div>
+      </div>
+    </article>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
