@@ -140,11 +140,11 @@ function cardTemplate(project) {
 
 function renderGrids() {
   if (featuredGrid) {
-    // Show top 6 on Overview landing page
+    
     featuredGrid.innerHTML = PROJECTS.slice(0, 6).map(cardTemplate).join("");
   }
   if (workGrid) {
-    // Show all 10 on Work page
+   
     workGrid.innerHTML = PROJECTS.map(cardTemplate).join("");
   }
 }
@@ -204,11 +204,11 @@ function openSidebar() {
   menuToggle.setAttribute("aria-expanded", "true");
 }
 
-// Initial render
+
 renderGrids();
 setView(location.hash || "overview");
 
-// Event delegations
+
 document.addEventListener("click", (event) => {
   const nav = event.target.closest("[data-view]");
   if (nav) {
@@ -242,7 +242,7 @@ menuToggle.addEventListener("click", () => {
 });
 overlay.addEventListener("click", closeSidebar);
 
-// Filter buttons in Work view
+
 document.querySelectorAll(".filter-btn").forEach((btn) => {
   btn.addEventListener("click", () => {
     document.querySelectorAll(".filter-btn").forEach((item) => item.classList.remove("is-active"));
@@ -256,7 +256,7 @@ document.querySelectorAll(".filter-btn").forEach((btn) => {
   });
 });
 
-// Contact form handling with real email delivery to owotutufatai104@gmail.com
+
 const form = document.getElementById("contact-form");
 if (form) {
   form.addEventListener("submit", async (event) => {
