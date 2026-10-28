@@ -122,7 +122,7 @@ const menuToggle = document.getElementById("menu-toggle");
 
 function cardTemplate(project) {
   return `
-    <button class="project-card" type="button" data-project="${project.id}" aria-label="Open ${project.title} case study">
+    <button class="project-card" type="button" data-project="${project.id}" data-category="${project.category}" aria-label="Open ${project.title} case study">
       <div class="card-img-wrap">
         <img src="${project.image}" alt="${project.title}" loading="lazy" />
       </div>
@@ -243,15 +243,18 @@ menuToggle.addEventListener("click", () => {
 overlay.addEventListener("click", closeSidebar);
 
 
+// Filter buttons in Work view
 document.querySelectorAll(".filter-btn").forEach((btn) => {
   btn.addEventListener("click", () => {
     document.querySelectorAll(".filter-btn").forEach((item) => item.classList.remove("is-active"));
     btn.classList.add("is-active");
     const filter = btn.dataset.filter;
+    if (!workGrid) return;
     workGrid.querySelectorAll(".project-card").forEach((card) => {
-      const project = PROJECTS.find((item) => item.id === card.dataset.project);
-      const show = filter === "all" || project.category === filter;
+      const category = card.dataset.category || (PROJECTS.find((p) => p.id === card.dataset.project) || {}).category;
+      const show = filter === "all" || category === filter;
       card.hidden = !show;
+      card.style.display = show ? "flex" : "none";
     });
   });
 });

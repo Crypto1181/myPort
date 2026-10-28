@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <!-- Base ambient dark bronze / warm espresso gradient -->
+    <radialGradient id="bgBase" cx="40%" cy="30%" r="95%">
+      <stop offset="0%" stop-color="#9c3d0c"/>
+      <stop offset="25%" stop-color="#6a2606"/>
+      <stop offset="50%" stop-color="#361303"/>
+      <stop offset="75%" stop-color="#1c0802"/>
+      <stop offset="100%" stop-color="#0d0401"/>
+    </radialGradient>
+
+    <!-- Top-Left warm amber wash -->
+    <radialGradient id="topLeftAmber" cx="12%" cy="15%" r="60%">
+      <stop offset="0%" stop-color="#c24e0e" stop-opacity="0.7"/>
+      <stop offset="35%" stop-color="#8c3207" stop-opacity="0.4"/>
+      <stop offset="70%" stop-color="#2e0e02" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Top-Right warm golden sunrise burst -->
+    <radialGradient id="topRightGlow" cx="90%" cy="15%" r="75%">
+      <stop offset="0%" stop-color="#ffcf66" stop-opacity="0.98"/>
+      <stop offset="20%" stop-color="#f59e0b" stop-opacity="0.88"/>
+      <stop offset="42%" stop-color="#d97706" stop-opacity="0.6"/>
+      <stop offset="65%" stop-color="#853408" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#180802" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Center-wide atmospheric amber aura -->
+    <radialGradient id="centerAura" cx="55%" cy="45%" r="65%">
+      <stop offset="0%" stop-color="#ea580c" stop-opacity="0.55"/>
+      <stop offset="35%" stop-color="#b45309" stop-opacity="0.35"/>
+      <stop offset="70%" stop-color="#451a03" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Diagonal luminous beam: angled upwards at ~32 degrees -->
+    <linearGradient id="beamGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ea580c" stop-opacity="0"/>
+      <stop offset="25%" stop-color="#ea580c" stop-opacity="0.05"/>
+      <stop offset="36%" stop-color="#f59e0b" stop-opacity="0.28"/>
+      <stop offset="44%" stop-color="#fbbf24" stop-opacity="0.65"/>
+      <stop offset="48%" stop-color="#fff0b8" stop-opacity="0.95"/>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="1"/>
+      <stop offset="52%" stop-color="#fff0b8" stop-opacity="0.95"/>
+      <stop offset="56%" stop-color="#fbbf24" stop-opacity="0.65"/>
+      <stop offset="64%" stop-color="#f59e0b" stop-opacity="0.28"/>
+      <stop offset="75%" stop-color="#ea580c" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#ea580c" stop-opacity="0"/>
+    </linearGradient>
+
+    <filter id="beamBlur" x="-25%" y="-25%" width="150%" height="150%">
+      <feGaussianBlur stdDeviation="32"/>
+    </filter>
+
+    <filter id="beamWideBlur" x="-35%" y="-35%" width="170%" height="170%">
+      <feGaussianBlur stdDeviation="90"/>
+    </filter>
+  </defs>
+
+  <!-- 1. Deep warm base -->
+  <rect width="100%" height="100%" fill="url(#bgBase)"/>
+  
+  <!-- 2. Ambient aura in the center -->
+  <rect width="100%" height="100%" fill="url(#centerAura)"/>
+
+  <!-- 3. Top-Left warm amber wash -->
+  <rect width="100%" height="100%" fill="url(#topLeftAmber)"/>
+
+  <!-- 4. Top-Right luminous sunrise flare -->
+  <rect width="100%" height="100%" fill="url(#topRightGlow)"/>
+
+  <!-- 5. Wide atmospheric beam flare (rotated ~-32deg across viewport) -->
+  <g transform="translate(960, 540) rotate(-32) translate(-1400, -600)">
+    <rect x="0" y="0" width="2800" height="1200" fill="url(#beamGradient)" filter="url(#beamWideBlur)" opacity="0.75"/>
+    <rect x="0" y="0" width="2800" height="1200" fill="url(#beamGradient)" filter="url(#beamBlur)" opacity="0.95"/>
+  </g>
+</svg>
