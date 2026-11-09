@@ -1,5 +1,18 @@
 const PROJECTS = [
   {
+    id: "subbig-vtu",
+    title: "Subbig VTU — Airtime, Data & Utility Mobile Application",
+    category: "fintech",
+    categoryLabel: "Fintech & VTU",
+    image: "assets/subbig_vtu.jpg",
+    role: "Lead Mobile Developer & App Manager",
+    summary: "Architected, developed, and deployed the official Subbig VTU mobile application, currently live and actively maintained on the Google Play Store. Built a responsive cross-platform Flutter client app for seamless wallet top-ups, airtime/data dispensing, cable TV, and electricity bill payments. Managed backend database architecture and integrated secure, high-throughput payment gateway APIs for automated real-time transaction processing.",
+    deliverables: "Live Google Play Store production app, automated payment gateway & utility API integrations, secure biometric wallet authentication, instant digital receipt generation, and high-availability database architecture.",
+    tags: ["Flutter", "Dart", "Google Play Store", "VTU", "Fintech", "Payment Gateways", "API Integration", "Mobile App Development"],
+    liveUrl: "https://play.google.com/store/apps/details?id=com.subbigtech.subbig",
+    liveText: "View on Google Play ↗"
+  },
+  {
     id: "forex-trading",
     title: "Custom Forex Trading App with Live Market Data",
     category: "fintech",
@@ -140,11 +153,13 @@ function cardTemplate(project) {
 
 function renderGrids() {
   if (featuredGrid) {
-    
-    featuredGrid.innerHTML = PROJECTS.slice(0, 6).map(cardTemplate).join("");
+    const cards = PROJECTS.map(cardTemplate).join("");
+    featuredGrid.innerHTML = `
+      <div class="marquee-group">${cards}</div>
+      <div class="marquee-group" aria-hidden="true">${cards}</div>
+    `;
   }
   if (workGrid) {
-   
     workGrid.innerHTML = PROJECTS.map(cardTemplate).join("");
   }
 }
@@ -166,6 +181,19 @@ function openCase(id) {
   if (delivEl) delivEl.textContent = project.deliverables;
 
   document.getElementById("modal-tags").innerHTML = project.tags.map((tag) => `<span>${tag}</span>`).join("");
+  
+  const liveBtn = document.getElementById("modal-live-btn");
+  if (liveBtn) {
+    if (project.liveUrl) {
+      liveBtn.href = project.liveUrl;
+      const span = liveBtn.querySelector("span");
+      if (span) span.textContent = project.liveText || "View Project ↗";
+      liveBtn.hidden = false;
+    } else {
+      liveBtn.hidden = true;
+    }
+  }
+
   modal.hidden = false;
   document.body.style.overflow = "hidden";
 }
@@ -241,6 +269,17 @@ menuToggle.addEventListener("click", () => {
   else openSidebar();
 });
 overlay.addEventListener("click", closeSidebar);
+
+// Pause marquee on touch for mobile devices
+const featuredMarquee = document.getElementById("featured-marquee");
+if (featuredMarquee) {
+  featuredMarquee.addEventListener("touchstart", () => {
+    featuredMarquee.classList.add("is-paused");
+  }, { passive: true });
+  featuredMarquee.addEventListener("touchend", () => {
+    featuredMarquee.classList.remove("is-paused");
+  }, { passive: true });
+}
 
 
 // Filter buttons in Work view
